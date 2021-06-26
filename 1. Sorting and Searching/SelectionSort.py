@@ -6,4 +6,4 @@ def selectionSort(arr):
 
 arr = [10,2,4,12,12,0]     
 selectionSort(arr)   
-print(arr,"selectionSort")
+print(arr,"Selection Sort")
