@@ -6,14 +6,12 @@ def insertionSort(arr):
         while j >= 0 and key < arr[j]:
             # Traversing sorted array, if found any value is less than key value , keep sorting
             arr[j + 1] = arr[j]
-            j -= 1
-            print(arr, "insorted array")    
+            j -= 1 
         arr[j + 1] = key
-        print(arr, "sorted array")
        
 arr = [ 9, 8, 7, 6, 4, 3, 2]
 insertionSort(arr)
-print(arr, "sorted array")
+print(arr, "insertionSort array")
 
 
         
