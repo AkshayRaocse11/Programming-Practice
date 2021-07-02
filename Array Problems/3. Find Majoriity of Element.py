@@ -11,9 +11,8 @@ def countSort(arr):
     max_value = max(all_values)
     for k, v in seen.items():
         if v == max_value:
-            if len(arr)/2 < max_value:
-                return k
+            return k
 
 
-arr = [1, 2, 2, 3, 2, 2, 5, 5, 5, 5, 5, 5, 5]
+arr = [1, 2, 2, 3]
 print(countSort(arr), "Majority elements")

@@ -9,8 +9,8 @@ def sort(index,value):
         else:
             target.insert(index[i],value[i])
     return target
-valueArr = [2,3,4,5,6]
-index = [0,1,3,3,2]
+valueArr = [1,4,3,5,6]
+index = [3,1,3,3,2]
 print(sort(index,valueArr))
 
 
