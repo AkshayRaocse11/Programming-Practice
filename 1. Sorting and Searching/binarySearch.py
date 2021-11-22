@@ -15,4 +15,5 @@ arr = [2,4,5,6,8,12,111,1]
 k=111   
 print(binarySearch(sorted(arr),0,(len(arr)-1),k))
 
-    
+# TC O(logn) sc - 0(1)   
+# ARR, S - START INDEX , E - END INDEX , K - SEARCH ELEMENT

@@ -71,3 +71,5 @@ LL.display()
 print("delete None")
 LL.delete_node(80)
 LL.display()
+# Data structure	Access	Search	Insertion	Deletion                      
+# Singly Linked list	O(N)	O(N)	O(1)	O(1)

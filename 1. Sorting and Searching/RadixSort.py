@@ -29,3 +29,4 @@ def radixSort(arr):
 arr =[20000,200,9,12,4,5,6,1]        
 radixSort(arr)
 print(arr, "Quick sort")
+#   TC O(N+K)

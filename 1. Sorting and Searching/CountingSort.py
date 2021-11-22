@@ -23,3 +23,10 @@ arr=countSort(arr)
 print(arr,"Count Sort")
          
 
+# Counting sort is a sorting technique based on keys between a specific range. 
+# It works by counting the number of objects having distinct key values (kind of hashing). 
+# Then doing some arithmetic to calculate the position of each object in the output sequence.
+# Worst complexity: O(n+r) r - is auxiliary array
+# Average complexity: (n+r)
+# Space complexity: (n+r)
+# Stable: Yes

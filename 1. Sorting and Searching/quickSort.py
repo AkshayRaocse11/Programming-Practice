@@ -16,3 +16,4 @@ def partition(arr,p,r):
 arr = [0,100,90,28,1,2,3,89,200,0]
 quicksort(arr,0,len(arr)-1)
 print(arr,"Quciksort")
+#TC o(nlogn) 0(n^2) sc o(logn) 
