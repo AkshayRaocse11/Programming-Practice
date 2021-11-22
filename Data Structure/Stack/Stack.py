@@ -37,5 +37,6 @@ while True:
     else:
         break     
 
-
+# Data structure	Access	Search	Insertion	Deletion
+# Stack	O(N)	O(N)	O(1)	O(1)
 
