@@ -16,8 +16,18 @@ class Heap:
         for i in range(n//2,-1,-1):
             self.heapify(arr,n,i)
 
+    def heapSort(self,arr):
+        n= len(arr)
+        self.builMaxHeap(arr,n)
+        for i in range(n-1,0,-1):
+            arr[i],arr[0] = arr[0],arr[i]
+            self.heapify(arr,i,0)
+
 arr = [4,1,3,2,16,9,10,14,8,7]
 h =Heap()
 h.builMaxHeap(arr,len(arr))
 print(arr,"Build Max heap")
+h.heapSort(arr)
+print(arr,"heapSort")
 
+# TC O(NLOGN)
