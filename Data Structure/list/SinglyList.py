@@ -42,6 +42,27 @@ class LinkedList:
                 return
             current = current.link
         print("Elemnt Not Found in List")
+    def isPalindrome(self):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        arr = []
+        current = self.head
+        orignal = self.head
+        while current.link !=None:
+            arr.append(current.info)
+            current = current.link
+        arr.append(current.info)
+        i=len(arr)-1
+        while orignal.link !=None:
+
+            if orignal.info != arr[i]:
+                return False
+            orignal = orignal.link
+            i-=1
+            
+        return True        
     def display(self):
         current = self.head
         while current!= None:
@@ -52,24 +73,10 @@ class LinkedList:
 
 
 LL = LinkedList()
-LL.insert_at_start(10)
-LL.insert_at_start(60)
-LL.insert_at_end(10)
-LL.insert_at_start(70)
-LL.insert_at_start(80)
-LL.insert_at_end(100)
-LL.display()
-print("delete start")
-LL.delete_node(70)
-LL.display()
-print("delete end")
-LL.delete_node(100)
-LL.display()
-print("delete Mid")
-LL.delete_node(80)
-LL.display()
-print("delete None")
-LL.delete_node(80)
-LL.display()
+LL.insert_at_start(1)
+LL.insert_at_end(2)
+LL.insert_at_end(2)
+
+print(LL.isPalindrome())
 # Data structure	Access	Search	Insertion	Deletion                      
 # Singly Linked list	O(N)	O(N)	O(1)	O(1)
