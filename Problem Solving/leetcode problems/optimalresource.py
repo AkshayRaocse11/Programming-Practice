@@ -47,11 +47,13 @@ def allocate_machines_regionally(machines, required_capacity):
         _machine = Machine(*spec_tuple)
         if _machine.cost_per_hr:
             filtered_machines.append(_machine)
+    
     # Prioritise machines with least cost_per_unit
     machine_priorities = sorted(
         filtered_machines,
         key=lambda machine: machine.cost_per_unit
     )
+    
     # Allocation logic
     allocated_machines = []
     for machine in machine_priorities:
@@ -99,3 +101,17 @@ if __name__ == '__main__':
     results = allocate_machines(required_capacity, total_hrs)
 
     print(json.dumps(results, indent=4))
+
+##################################Sample Inputs#########################################################
+
+#Test case1: Enter total hours: 1
+############ Enter total capacity: 1150
+
+#Test case2: Enter total hours: 5
+############ Enter total capacity: 230
+
+# Test case3: Enter total hours: 24
+############# Enter total capacity: 100
+
+#Test case4: Enter total hours: 12
+############ Enter total capacity: 1100
