@@ -27,6 +27,7 @@ def ways(total, coins):
     for coin in coins:
         for i in range(coin, total + 1):
             ways[i] += [way + Counter({coin: 1}) for way in ways[i-coin]]
+
     return ways[total]
 
 
@@ -40,7 +41,6 @@ def find_machines(target, hours):
     final_output = []
     for i, city_unit in enumerate([new_york_avl_unit, india_avl_unit, china_avl_unit]):
         current_city = cites[i]
-        
         print('Please Wait checking '+ current_city + ' all combinations ...')
         
         # call to the main function. combination finder
@@ -56,11 +56,11 @@ def find_machines(target, hours):
                 for items in combination.elements():
                     total+=base_data[items][cites_key[i]]
                 combinations_cost.append(total)
-
+            
             
             min_combination_cost = min(combinations_cost)
             min_combination_index = combinations_cost.index(min_combination_cost)
-
+            print(min_combination_cost)
             short_cost_combination = all_combinations[min_combination_index].most_common()
 
             # form a output format
@@ -93,3 +93,17 @@ if __name__ == "__main__":
             break
         except Exception as e:
             print('Please Enter correct Data - '+ str(e))
+
+##################################Sample Inputs#########################################################
+
+#Test case1: Enter total hours: 1
+############ Enter total capacity: 1150
+
+#Test case2: Enter total hours: 5
+############ Enter total capacity: 230
+
+# Test case3: Enter total hours: 24
+############# Enter total capacity: 100
+
+#Test case4: Enter total hours: 12
+############ Enter total capacity: 1100
